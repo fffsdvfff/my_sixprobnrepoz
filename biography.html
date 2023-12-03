@@ -3,76 +3,121 @@
 <meta charset="utf-8">
     <title>biography</title>
     <style type="text/css">
-        #button:link{
-            color:white
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-     #button {
-        margin: 10px;
-        border-width: 2px; 
-        border-style: solid;
-        border-color: black;
-        width: 100px;
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: blue;
-        text-decoration: none;
-      
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 140%;
+        }
+
+        p {
+            font-size: 120%;
+            background-color: #e6e6e6;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        #back {
+            font-style: italic;
+        }
+
+        #zmi {
+            text-align: center;
+        }
+
+        #back12 {
+            font-weight: 500;
+        }
+
+        #up {
+            text-transform: uppercase;
+        }
+
+        #base {
+            background-color: #FF5733;
+            color: #FFFFFF;
+        }
+
+        #child {
+            background-color: #2d8617;
+            color: #FFFFFF;
+        }
+
+        #school {
+            background-color: #ff0bc2;
+            color: #FFFFFF;
+        }
+
+        #unschool {
+            background-color: #3498DB;
+            color: #FFFFFF;
+        }
+
+        #univ {
+            background-color: #060afc;
+            color: #FFFFFF;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid black;
+            margin: 20px;
+        }
+
+
+       @media (min-width: 992px) {
+        article {
+            width: 48%;
+            display: inline-block;
+            margin-right: 2%;
+        }
+
+        article:nth-child(3n) {
+            margin-right: 0;
+        }
     }
-    #button:visited {
-      color: black;
-      background-color: transparent;
-      text-decoration: none;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        article {
+            width: 100%;
+            display: block;
+        }
+
+        article:nth-child(1),
+        article:nth-child(2) {
+            width: 48%;
+            display: inline-block;
+            margin-right: 2%;
+        }
+
+        article:nth-child(3n) {
+            margin-right: 0;
+        }
     }
-    #button:hover {
-        background-color: magenta; 
-    }
-    
-    #button:active {
-        background-color: yellow;
-    }
-    #base {
-        background-color: #FF5733; 
-        color: #FFFFFF; 
-    }
-    
-    #child {
-        background-color: #2d8617; 
-        color: #FFFFFF; 
-    }
-    #school {
-        background-color: #ff0bc2; 
-        color: #FFFFFF; 
-    }
-    
-    #unschool {
-        background-color: #3498DB; 
-        color: #FFFFFF; 
-    }
-    #univ {
-        background-color: #060afc;
-        color: #FFFFFF; 
-    }
-    h1 {
-        text-align: center;
-      font-size: 22px;           
-    }
-    h3 {
-        text-align: center;
-    }
-    body {
-        font-size: 120%;
-    }
-    h2{
-        font-size:140%;
-    }
-    #back{
-        font-style: italic;
-    }
-    #Зміст {
-        font-weight: center;    
-    } 
-    #v {
-        text-transform: uppercase;
+
+    @media (max-width: 767px) {
+        article {
+            width: 100%;
+            display: block;
+        }
     }
     </style>
 </head>
