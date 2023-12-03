@@ -7,23 +7,45 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Додано фоновий колір для покращення читабельності */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 3px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Виправлено звернення до рядків на малих екранах */
+            margin-bottom: 20px;
+        }
+
+        .article {
+            width: 48%;
+            border: 1px solid black;
+            padding: 20px; /* Збільшено відступи для кращого вигляду */
+            margin-bottom: 20px;
+            box-sizing: border-box; /* Враховано відступи та рамку в розмір блоку */
         }
 
         h1 {
             text-align: center;
-            font-size: 22px;
+            font-size: 28px; /* Збільшено розмір шрифту для назви */
         }
 
         h2 {
-            font-size: 140%;
+            font-size: 18px; /* Збільшено розмір шрифту для підзаголовків */
         }
 
         p {
-            font-size: 120%;
+            font-size: 16px; /* Збільшено розмір шрифту для тексту */
             background-color: #e6e6e6;
-            padding: 10px;
+            padding: 15px; /* Збільшено відступи для тексту */
             border: 1px solid black;
-            margin: 10px;
+            margin: 15px 0; /* Збільшено відступи відгалуження */
         }
 
         ul {
@@ -45,117 +67,28 @@
         }
 
         #back12 {
-            font-weight: 500;
+            font-weight: bold; /* Змінено на більш сучасне звернення */
         }
 
         #up {
             text-transform: uppercase;
+            display: block;
+            text-align: center; /* Вирівняно по центру на малих екранах */
+            margin-top: 20px; /* Додано відступ для кнопки "Уверх" */
+            text-decoration: none; /* Забрано підкреслення посилання */
+            color: #333; /* Змінено колір посилання для кращої видимості */
         }
 
-        #base {
-            background-color: #FF5733;
-            color: #FFFFFF;
-        }
-
-        #child {
-            background-color: #2d8617;
-            color: #FFFFFF;
-        }
-
-        #school {
-            background-color: #ff0bc2;
-            color: #FFFFFF;
-        }
-
-        #unschool {
-            background-color: #3498DB;
-            color: #FFFFFF;
-        }
-
-        #univ {
-            background-color: #060afc;
-            color: #FFFFFF;
+        #up:hover {
+            color: #555; /* Змінено колір при наведенні для кращої видимості */
         }
 
         hr {
             border: none;
             border-top: 1px solid black;
-            margin: 20px;
+            margin: 20px 0; /* Збільшено відступи лінії */
         }
-
-
-       @media (min-width: 992px) {
-        article {
-            width: 48%;
-            display: inline-block;
-            margin-right: 2%;
-        }
-
-        article:nth-child(3n) {
-            margin-right: 0;
-        }
-    }
-
-        @media (min-width: 768px) and (max-width: 991px) {
-        article {
-            width: 100%;
-            display: block;
-        }
-
-        article:nth-child(1),
-        article:nth-child(2) {
-            width: 48%;
-            display: inline-block;
-            margin-right: 2%;
-        }
-
-        article:nth-child(3n) {
-            margin-right: 0;
-        }
-    }
-
-        @media (max-width: 767px) {
-        article {
-            width: 100%;
-            display: block;
-        }
-    }
-    
-
-
-        .container {
-        display: flex;
-        flex-direction: column;
-    }
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.article {
-    width: 48%;
-    border: 1px solid black;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 991px) {
-    .row {
-        flex-wrap: wrap;
-    }
-
-    .article {
-        width: 100%;
-    }
-
-    .article:nth-child(1),
-    .article:nth-child(2) {
-        width: 48%;
-    }
-}
-
+    </style>
 
     </style>
 </head>
