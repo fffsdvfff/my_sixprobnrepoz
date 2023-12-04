@@ -4,37 +4,49 @@
 <meta charset="utf-8">
     <title>biography</title>
     <style type="text/css">
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+        body{
+  margin: 0 ;
+  font-family: Arial, sans-serif;
+}
+h1{
+  text-align: center;
+  margin-top: 20px;
+}
 
-        h1 {
-            text-align: center;
-            font-size: 22px;
-        }
+h2 {
+  border: 2px solid #000000;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px;
+  z-index: 2;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-        h2 {
-            font-size: 140%;
-        }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-        p {
-            font-size: 120%;
-            background-color: #e6e6e6;
-            padding: 10px;
-            border: 1px solid black;
-            margin: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px;
-        }
+.box {
+  border: 2px solid #000000;
+  background-color: aquamarine;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+.box p {
+  margin-top: 50px;
+}
 
         #back {
             font-style: italic;
@@ -82,65 +94,60 @@
             border-top: 1px solid black;
             margin: 20px;
         }
-        .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+        @media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8,
+  .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+      float: left;
+  }
+  .col-lg-1 { width: 8.33%; }
+  .col-lg-2 { width: 16.66%; }
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.33%; }
+  .col-lg-5 { width: 41.66%; }
+  .col-lg-6 { width: 50%; }
+  .col-lg-7 { width: 58.33%; }
+  .col-lg-8 { width: 66.66%; }
+  .col-lg-9 { width: 75%; }
+  .col-lg-10 { width: 83.33%; }
+  .col-lg-11 { width: 91.66%; }
+  .col-lg-12 { width: 100%; }
 }
-
-.article {
-    width: 48%;
-    margin-bottom: 20px;
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8,
+  .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      float: left;
+  }
+  .col-md-1 { width: 8.33%; }
+  .col-md-2 { width: 16.66%; }
+  .col-md-3 { width: 25%; }
+  .col-md-4 { width: 33.33%; }
+  .col-md-5 { width: 41.66%; }
+  .col-md-6 { width: 50%; }
+  .col-md-7 { width: 58.33%; }
+  .col-md-8 { width: 66.66%; }
+  .col-md-9 { width: 75%; }
+  .col-md-10 { width: 83.33%; }
+  .col-md-11 { width: 91.66%; }
+  .col-md-12 { width: 100%; }
 }
-
-#base,
-#child,
-#school {
-    width: 31%;
+@media (max-width: 992px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8,
+  .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+      float: left;
+  }
+  .col-sm-1 { width: 8.33%; }
+  .col-sm-2 { width: 16.66%; }
+  .col-sm-3 { width: 25%; }
+  .col-sm-4 { width: 33.33%; }
+  .col-sm-5 { width: 41.66%; }
+  .col-sm-6 { width: 50%; }
+  .col-sm-7 { width: 58.33%; }
+  .col-sm-8 { width: 66.66%; }
+  .col-sm-9 { width: 75%; }
+  .col-sm-10 { width: 83.33%; }
+  .col-sm-11 { width: 91.66%; }
+  .col-sm-12 { width: 100%; }
 }
-
-#unschool,
-#univ {
-    width: 48%;
-}
-@media screen and (max-width: 1024px) {
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .article {
-        width: 48%;
-        margin-bottom: 20px;
-    }
-
-    #base,
-    #child {
-        width: 48%;
-    }
-
-    #school,
-    #unschool {
-        width: 48%;
-    }
-
-    #univ {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .container {
-        display: block;
-    }
-
-    .article {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-
 </style>
 </head>
 <body> 
@@ -157,7 +164,7 @@
     
     <div class="container">
         <div class="row">
-                <div class="article" id="base">
+                <div class="col-lg-4 col-md-6">
                     <div class="box">
                           <h2 href="#Розділ1">Базова інформація</h2>
                          <p id="base">
@@ -166,7 +173,7 @@
                     </div>
                 </div>
                  <a href="#Зміст">До змісту</a>
-                <div class="article" id="child">
+                <div class="col-lg-4 col-md-6">
                     <div class="box">
                        <h2 id="#Розділ2">Дитинство</h2>
                         <p id="child">
@@ -175,7 +182,7 @@
                     </div> 
                 </div>
                 <a  href="#Зміст">До змісту</a> 
-                <div class="article" id="school">
+                <div class="col-lg-4 col-md-6">
                     <div class="box">
                         <h2 id="#Розділ3">Шкільні роки</h2>
                         <p id="school">
@@ -184,7 +191,7 @@
                     </div>
                 </div>
                 <a href="#Зміст">До змісту</a>
-                    <div class="article" id="unschool">
+                <div class="col-lg-4 col-md-6">
                        <div class="box">
                            <h2 id="#Розділ4">Поза школою</h2>
                            <p id="unschool">
@@ -193,16 +200,16 @@
                         </div>
                     </div>
                 <a href="#Зміст">До змісту</a>
-                    <div class="article" id="univ"> 
+                <div class="col-lg-4 col-md-6">
                         <div class="box">
                             <h2 id="#Розділ5">Університет</h2>
                             <p id="univ">
                             Здавши успішно ЗНО, я отримала можливість вступити в омріяний університет. Я, звичайно, обрав Прикарпатський національний університет імені В. Стефаника, тому що інакше і не могло бути. Через свій потяг до технічних наук, я не довго думала над вибором спеціальності і обрала Комп'ютерні науки. Зразу можу сказати, що із своїм вибором я не помилився. Але чесно багато предметів даються важко, навіть цей предмет мені багато в чому ще не зрозумілий. Але я сподіваюся згодом я все зрозумію і стану чудовим фахівцем.
                             </p>
                         </div>
-                    </div>
-                    <a href="#Зміст">До змісту</a>
-                    <a  id="v" href="Верх">Уверх</a>
+                </div>
+                <a href="#Зміст">До змісту</a>
+                <a  id="v" href="Верх">Уверх</a>
             <div>
         <div>
 </body>
