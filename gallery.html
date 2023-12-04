@@ -25,18 +25,38 @@
         text-align: center;
         font-size: 160PX;
     }
+    .images-container {
+    display: flex; /* Використовуємо flexbox */
+    justify-content: space-around; /* Рівномірний розподіл між елементами */
+    align-items: center; /* Вертикальне центрування елементів */
+}
+
+/* Кожне зображення разом із відповідним заголовком */
+.image-box {
+    text-align: center; /* Вирівнювання тексту по центру */
+    flex: 1; /* Гнучкість для розподілу простору */
+    margin: 0 10px; /* Відступи між блоками */
+}
     
     </style>
 </head>
 <body>
     <h1>Галерея Sivaeva Ella Leonidivna</h1>
     <a href="index.html">назад на головну</a>
-    <h2>Мої зображення</h2>
-    <h3>Зображення у цій папці</h3>
-    <img src="green.gif" width="640" height="480" alt="Picture">
-    <h4>Зображення у папці</h4>
-    <img src="fff/yuui.gif" width="640" height="480" alt="Piicture">
-    <h5>Зображення онлайн</h5>
-    <img src="https://place-hold.it/1280x1024/fgh/asd.jpg&fontsize=14" width="1280" height="1024" alt="Picture">
-
-</body></html>
+     <h2>Мої зображення</h2>
+        <div class="images-container">
+            <div class="image-box">
+               <h3>Зображення у цій папці</h3>
+               <img src="green.gif" width="640" height="480" alt="Picture">
+            </div>
+            <div class="image-box">
+               <h4>Зображення у папці</h4>
+               <img src="fff/yuui.gif" width="640" height="480" alt="Piicture">
+            </div>
+            <div class="image-box">
+               <h5>Зображення онлайн</h5>
+               <img src="https://place-hold.it/1280x1024/fgh/asd.jpg&fontsize=14" width="1280" height="1024" alt="Picture">
+            </div>
+        </div>
+</body>
+</html>
