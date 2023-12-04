@@ -82,6 +82,63 @@
             border-top: 1px solid black;
             margin: 20px;
         }
+        .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+#base,
+#child,
+#school {
+    width: 31%;
+}
+
+#unschool,
+#univ {
+    width: 48%;
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .article {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    #base,
+    #child {
+        width: 48%;
+    }
+
+    #school,
+    #unschool {
+        width: 48%;
+    }
+
+    #univ {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        display: block;
+    }
+
+    .article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 
 
 </style>
