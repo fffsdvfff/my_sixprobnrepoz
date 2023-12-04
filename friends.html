@@ -27,6 +27,9 @@
             padding: 8px;
             text-align: center; 
         }
+        table th {
+         font-size: 130%;
+        }
 
        
         th {
@@ -36,9 +39,23 @@
         }
         table td:last-child {
          text-align: right;
+         font-size: 120%; 
         }
-
-        
+        @media screen and (max-width: 768px) {
+    table th {
+        font-size: 120%; /* Збільшення заголовків стовпців на 20% */
+    }
+}
+@media screen and (max-width: 768px) {
+    table td {
+        font-size: 110%; /* Збільшення незаголовкових рядків на 10% */
+    }
+}
+@media screen and (max-width: 480px) {
+    table th {
+        font-size: 110%; /* Збільшення заголовків стовпців на 10% */
+    }
+}
         .styled-table tr:nth-child(even) {
             background-color: #EDEDED; 
         }
