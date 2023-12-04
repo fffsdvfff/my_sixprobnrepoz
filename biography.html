@@ -5,101 +5,127 @@
     <title>biography</title>
     <style type="text/css">
         body{
+         box-sizing: border-box; 
          margin: 0 ;
+         padding: 0; 
          font-family: Arial, sans-serif;
         }
         h1{
+         padding: 10px;
+         text-align: center;
+         font-size: 22px;
          text-align: center;
          margin-top: 20px;
         }
+        #back {
+         font-style: italic;
+         margin-left: 10px;
+        }
 
        h2 {
-         border: 2px solid #000000;
-         display: inline-block;
-         position: absolute;
-         top: 0;
-         right: 0;
-         margin: 0;
-         padding: 5px;
-         z-index: 2;
+         text-align: center;
+         padding: 10px;
         }
-        .container {
-         width: 100%;
-         max-width: 1200px;
-         margin: 0 auto;
-        padding: 20px;
-         box-sizing: border-box;
+        section li{
+         list-style: none;
+         }
+         section a:link, section a:visited{
+         text-decoration: none;
+         background-color: blue;
+         border: 2px solid black;
+         color: gold;
+         display: block;
+         width: 150px;
+         text-align: center;
+         margin-bottom: 5px;
+         margin-left: 2%;
         }
-
-        .row::after {
-         content: "";
-         clear: both;
-         display: table;
+        section a:hover{
+         background-color: magenta;
+         color: white;
         }
-
-        .box {
-         border: 2px solid #000000;
-         background-color: aquamarine;
-         padding: 20px;
-         margin: 10px;
-         position: relative;
+        section a:active{
+         background-color: yellow;
+         color: black;
         }
-        .box p {
-          margin-top: 50px;
+        article{
+         border: 1px solid black;
+         font-size: 120%;
         }
-        .info-block {
-         width: 30%;
-         margin: 10px;
-         padding: 15px;
-         border: 1px solid #ccc;
+        .row{
+         display: grid;
+         padding: 2%;
+         column-gap: 2%;
         }
-
-        #back {
-            font-style: italic;
+        article {
+         font-size: 1.2em;
+         padding: 2%;
         }
-
-        #zmi {
-            text-align: center;
+        h2 {
+        font-size: 1.8em;
         }
-
-        #back12 {
-            font-weight: 500;
+        .container:first-of-type article{
+         background: blue;
+         color: yellow;
         }
-
-        #up {
-            text-transform: uppercase;
+        .container:nth-of-type(2) article{
+         background: green;
+         color: ivory;
         }
-
-        #base {
-            background-color: #FF5733;
-            color: #FFFFFF;
+        .container:nth-of-type(3) article{
+         background: orange;
+         color: purple;
         }
-
-        #child {
-            background-color: #2d8617;
-            color: #FFFFFF;
+        .container:nth-of-type(4) article{
+         background: red;
+         color: black;
         }
-
-        #school {
-            background-color: #ff0bc2;
-            color: #FFFFFF;
+        .container:last-of-type article{
+         background: lime;
+         color: navy;
         }
-
-        #unschool {
-            background-color: #3498DB;
-            color: #FFFFFF;
+        #content{
+         font-style: italic;
+         font-weight: bold;
         }
-
-        #univ {
-            background-color: #060afc;
-            color: #FFFFFF;
+        #up{
+         text-transform: uppercase;
         }
-
-        hr {
-            border: none;
-            border-top: 1px solid black;
-            margin: 20px;
-        }
+@media (min-width: 993px) {
+    .row {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  
+    .container:first-of-type {
+      grid-column: 1 / 3;
+    }
+  
+    .container:nth-of-type(2) {
+      grid-column: 3 / 5;
+    }
+  
+    .container:nth-of-type(3) {
+      grid-column: 5 / 7;
+    }
+  
+    .container:nth-of-type(4) {
+      grid-column: 1 / 4;
+    }
+  
+    .container:last-of-type {
+      grid-column: 4 / 7;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .container:last-of-type {
+      grid-column: 1 / 3; 
+    }
+  }
 
 </style>
 </head>
@@ -107,6 +133,7 @@
    <h1 id="Верх">Автобіографія Sivaeva Ella Leonidivna</h1>
    <a id="back" href="index.html">Назад на головну</a>
    <h3 id="Зміст">Зміст</h3>
+   <section>
    <ul>
       <li><a id="button" href="#Розділ1">Базова інформація</a></li>
       <li><a id="button" href="#Розділ2">Дитинство</a></li>
@@ -114,52 +141,50 @@
       <li><a id="button" href="#Розділ4">Поза школою</a></li>
       <li><a id="button" href="#Розділ5">Університет</a></li>
     </ul>
-    
+   </section>
     <div class="container">
         <div class="row">
-                <div class="info-block">
-                    <div class="box">
-                          <h2 href="#Розділ1">Базова інформація</h2>
-                         <p id="base">
-                         Мене звуть Сіваєва Елла Леонідівна.Я народилася двадцять першого липня 2006 року у місті Вилкове, Ізмаїльський район Одеська область.У мене є шість старших сестер та один брат. Також є три собаки та два коти. Мій зріст 167 см а вага 60 кг.У мене довге русяве волосся і спортивна статура. У мене гарний гумор. У мене мало друзів, але зате є хлопець. У людях я ціную чесність, відкритість, виховання і доброту. У майбутньому хочу почистити багато країн на різних континентах.Маю бажання в майбутньому мати домашнього вихованця. 
-                         </p>
-                    </div>
-                </div>
+            <article>
+                    <h2 href="#Розділ1">Базова інформація</h2>
+                    <p id="base">
+                    Мене звуть Сіваєва Елла Леонідівна.Я народилася двадцять першого липня 2006 року у місті Вилкове, Ізмаїльський район Одеська область.У мене є шість старших сестер та один брат. Також є три собаки та два коти. Мій зріст 167 см а вага 60 кг.У мене довге русяве волосся і спортивна статура. У мене гарний гумор. У мене мало друзів, але зате є хлопець. У людях я ціную чесність, відкритість, виховання і доброту. У майбутньому хочу почистити багато країн на різних континентах.Маю бажання в майбутньому мати домашнього вихованця. 
+                    </p>
+            </article>
                  <a href="#Зміст">До змісту</a>
-                 <div class="info-block">
-                    <div class="box">
+                <div class="container">
+                    <article>
                        <h2 id="#Розділ2">Дитинство</h2>
                         <p id="child">
                         Своє дитинство до 6 років десь я не пам'ятаю зовсім. Ну, це зрозуміло я ж дитиною була. Ну батьки розповідали, щоб я була шкодницею. З Моною часто сиділи сестри та брати. Перед школою я ходила до дитячого садка. Там я завела своїх перших друзів. Але на даний момент ні з ким із них не спілкуюся. У садочку я була слухняною і вихователі мене любили. Коли мені треба було вже закінчувати садок, я залишилася на другий рік тому що у батьків були проблеми. Ну а так дитинство було веселим. Дуже багато грала у дворі
                         </p>
-                    </div> 
-                </div>
+                    </article>
+                </div> 
                 <a  href="#Зміст">До змісту</a> 
-                <div class="info-block">
-                    <div class="box">
+                <div class="container">
+                    <article>
                         <h2 id="#Розділ3">Шкільні роки</h2>
                         <p id="school">
                         Як я вже говорила раніше, коли я прийшла до школи, я вже вміла трохи прочитати. Це мені давала впевненості, коли я відповідала на уроках. Більшість своїх однокласників я вже знала з молодших класів, але були і такі, яких я бачив уперше. Але ми швидко всі потоваришували. Десь до сьомого класу я навчалася дуже добре, але після сьомого класу мої оцінки стали погіршуватися, але в класі 10,11 я підтягнула всі свої оцінки і дуже багато ходила до репетиторів.
                         </p>
-                    </div>
+                    </article>
                 </div>
                 <a href="#Зміст">До змісту</a>
-                <div class="info-block">
-                       <div class="box">
-                           <h2 id="#Розділ4">Поза школою</h2>
-                           <p id="unschool">
-                           Після школи я зазвичай йшла додому, бо я там жив. Вдома я робила домашнє завдання або допомагала по дому щось. Коли був вільний час я зустрічалась з друзями. Після класу девʼятого полюбила спорт і почала бігати. Після школи я перейшла на тренування в тренажерному залі (цим я займаюсь і досі, хоча через навчання в університеті не завжди є час). Коли наступали літні канікули, вдома я бував вже не так часто. Ми з друзями грали футбол або волейбол, їздили на озеро, гуляли вечорами.
-                           </p>
-                        </div>
-                    </div>
+                <div class="container">
+                    <article>
+                        <h2 id="#Розділ4">Поза школою</h2>
+                        <p id="unschool">
+                        Після школи я зазвичай йшла додому, бо я там жив. Вдома я робила домашнє завдання або допомагала по дому щось. Коли був вільний час я зустрічалась з друзями. Після класу девʼятого полюбила спорт і почала бігати. Після школи я перейшла на тренування в тренажерному залі (цим я займаюсь і досі, хоча через навчання в університеті не завжди є час). Коли наступали літні канікули, вдома я бував вже не так часто. Ми з друзями грали футбол або волейбол, їздили на озеро, гуляли вечорами.
+                        </p>
+                    </article>
+                </div>
                 <a href="#Зміст">До змісту</a>
-                <div class="info-block">
-                        <div class="box">
-                            <h2 id="#Розділ5">Університет</h2>
-                            <p id="univ">
-                            Здавши успішно ЗНО, я отримала можливість вступити в омріяний університет. Я, звичайно, обрав Прикарпатський національний університет імені В. Стефаника, тому що інакше і не могло бути. Через свій потяг до технічних наук, я не довго думала над вибором спеціальності і обрала Комп'ютерні науки. Зразу можу сказати, що із своїм вибором я не помилився. Але чесно багато предметів даються важко, навіть цей предмет мені багато в чому ще не зрозумілий. Але я сподіваюся згодом я все зрозумію і стану чудовим фахівцем.
-                            </p>
-                        </div>
+                <div class="container">
+                    <article>
+                        <h2 id="#Розділ5">Університет</h2>
+                        <p id="univ">
+                        Здавши успішно ЗНО, я отримала можливість вступити в омріяний університет. Я, звичайно, обрав Прикарпатський національний університет імені В. Стефаника, тому що інакше і не могло бути. Через свій потяг до технічних наук, я не довго думала над вибором спеціальності і обрала Комп'ютерні науки. Зразу можу сказати, що із своїм вибором я не помилився. Але чесно багато предметів даються важко, навіть цей предмет мені багато в чому ще не зрозумілий. Але я сподіваюся згодом я все зрозумію і стану чудовим фахівцем.
+                        </p>
+                    </article>
                 </div>
                 <a href="#Зміст">До змісту</a>
                 <a  id="v" href="Верх">Уверх</a>
